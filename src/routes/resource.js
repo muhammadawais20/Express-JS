@@ -15,6 +15,9 @@ const resourceList = [
 
 //GET
 router.get("/", (req, res) => {
+  res.cookie('attendance', true, {
+    maxAge: 5000,
+  })
   res.send(resourceList);
 });
 
